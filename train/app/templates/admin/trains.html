@@ -1,0 +1,28 @@
+{% extends "admin/dashboard.html" %}
+
+{% block content %}
+<h2>Train Management</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Total Seats</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for train in trains %}
+        <tr>
+            <td>{{ train.id }}</td>
+            <td>{{ train.name }}</td>
+            <td>{{ train.source }}</td>
+            <td>{{ train.destination }}</td>
+            <td>{{ train.total_seats }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "admin/dashboard.html" %}
+
+{% block content %}
+<h2>Schedule Management</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Train</th>
+            <th>Departure</th>
+            <th>Arrival</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for schedule in schedules %}
+        <tr>
+            <td>{{ schedule.train.name }}</td>
+            <td>{{ schedule.departure.strftime('%d %b %Y, %H:%M') }}</td>
+            <td>{{ schedule.arrival.strftime('%d %b %Y, %H:%M') }}</td>
+            <td>₹{{ schedule.price }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

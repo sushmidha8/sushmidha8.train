@@ -1,0 +1,43 @@
+# Core Requirements
+Flask==2.3.2
+Flask-SQLAlchemy==3.0.3
+Flask-Migrate==4.0.4
+python-dotenv==1.0.0
+
+# Database
+SQLAlchemy==2.0.15
+psycopg2-binary==2.9.6  # For PostgreSQL
+pymysql==1.0.3  # For MySQL
+
+# Authentication
+Flask-Login==0.6.2
+Flask-WTF==1.1.1
+email-validator==1.3.1
+
+# Performance
+redis==4.5.5
+Flask-Caching==2.0.2
+Flask-Limiter==2.8.1
+
+# Frontend
+Flask-Assets==2.0
+cssmin==0.2.0
+jsmin==3.0.1
+
+# Email
+Flask-Mail==0.9.1
+
+# Admin
+Flask-Admin==1.6.1
+
+# API
+Flask-RESTful==0.3.9
+
+# Development
+Flask-DebugToolbar==0.13.1
+pytest==7.3.1
+pytest-cov==4.0.0
+
+# Production
+gunicorn==20.1.0
+gevent==22.10.2

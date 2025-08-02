@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ticket</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Book Your Ticket</h1>
+    </header>
+    
+    <main>
+        <div class="booking-form">
+            <h2>{{ schedule.train.name }} - {{ schedule.departure.strftime('%d %b %Y, %H:%M') }}</h2>
+            <p>{{ schedule.train.source }} to {{ schedule.train.destination }}</p>
+            <p>Price: ₹{{ schedule.price }} per seat</p>
+            
+            <form method="POST">
+                <div class="form-group">
+                    <label for="seats">Number of Seats</label>
+                    <input type="number" id="seats" name="seats" min="1" max="6" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Passenger Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <button type="submit">Confirm Booking</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
